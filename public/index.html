@@ -1,13 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Itens</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAYFLIX — Os Melhores Filmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-md p-0">
+        <a class="navbar-brand logo" href="index.html">RAY<span>FLIX</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#destaques">Destaques</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#todos">Filmes</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#aluno">Sobre</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEÇÃO 1: SLIDER DE DESTAQUES -->
+  <section class="sec-destaques" id="destaques">
+    <div class="container">
+      <div class="section-header">
+        <h2>Em Destaque</h2>
+        <div class="divider"></div>
+        <p>Filmes imperdíveis, selecionados especialmente para você</p>
+      </div>
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators" id="sliderIndicators"></div>
+        <div class="carousel-inner" id="sliderInner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: TODOS OS FILMES -->
+  <section class="sec-todos" id="todos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Todos os Filmes</h2>
+        <div class="divider"></div>
+        <p>Explore nosso catálogo completo de clássicos e contemporâneos</p>
+      </div>
+      <div class="row" id="filmesGrid"></div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: INFORMAÇÕES DO ALUNO -->
+  <section class="sec-aluno" id="aluno">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sobre o Projeto</h2>
+        <div class="divider"></div>
+        <p>Desenvolvido como trabalho prático da disciplina</p>
+      </div>
+      <div id="alunoSection"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RAYFLIX — Trabalho Prático · PUC Minas</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
