@@ -151,7 +151,7 @@ function renderSlider() {
             <span>📅 ${filme.ano}</span>
             <span>⭐ ${filme.nota}</span>
           </div>
-          <a href="detalhe.html?id=${filme.id}" class="btn-ver">Ver Detalhes</a>
+          <a href="detalhes.html?id=${filme.id}" class="btn-ver">Ver Detalhes</a>
         </div>
       </div>`;
 
@@ -167,7 +167,7 @@ function renderCards() {
 
   container.innerHTML = dados.filmes.map(filme => `
     <div class="col-12 col-sm-6 col-lg-4 mb-4">
-      <div class="card-filme" onclick="window.location='detalhe.html?id=${filme.id}'">
+      <div class="card-filme" onclick="window.location='detalhes.html?id=${filme.id}'">
         <div class="card-img-wrap">
           <img src="${filme.imagem_principal}" alt="${filme.nome}" loading="lazy">
           <span class="card-nota">⭐ ${filme.nota}</span>
@@ -175,7 +175,7 @@ function renderCards() {
         </div>
         <div class="card-body-filme">
           <p class="card-genero">${filme.genero}</p>
-          <h3 class="card-titulo"><a href="detalhe.html?id=${filme.id}">${filme.nome}</a></h3>
+          <h3 class="card-titulo"><a href="detalhes.html?id=${filme.id}">${filme.nome}</a></h3>
           <p class="card-desc">${filme.descricao}</p>
           <div class="card-footer-filme">
             <span>🎬 ${filme.diretor}</span>
